@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum Posisi dan Float</title>
+    <link rel="stylesheet" href="stylesheet_03_04.css" />
+  </head>
+  <body>
+    <!-- Posisi Statik -->
+    <!-- Posisi statik adalah posisi default yang digunakan oleh browser -->
+    <!-- Posisi statik membuat elemen tetap berada di tempatnya, tidak berubah -->
+    <div class="box1">Posisi Statik</div>
+    <!-- Posisi Relatif -->
+    <!-- Posisi relatif membuat elemen bergerak relatif terhadap posisi aslinya -->
+    <!-- Posisi relatif tidak berpengaruh pada elemen lainnya -->
+    <div class="box2">Posisi Relatif</div>
+    <!-- Posisi Absolute -->
+    <!-- Posisi absolute membuat elemen bergerak relatif terhadap induknya -->
+    <!-- Posisi absolute dapat berpengaruh pada elemen lainnya -->
+    <div class="box3">Posisi Absolute</div>
+    <!-- Posisi Tetap -->
+    <!-- Posisi tetap membuat elemen bergerak relatif terhadap viewport -->
+    <!-- Posisi tetap dapat berpengaruh pada elemen lainnya -->
+    <div class="box4">Posisi Tetap</div>
+
+    <!-- Paragraf pertama, akan ditampung di sebelah kiri -->
+    <!-- float: left akan membuat paragraf ini ditampung di sebelah kiri -->
+    <p>Ini adalah paragraf pertama. Ini akan menampung di sebelah kiri.</p>
+    <!-- Paragraf kedua, akan ditempatkan setelah elemen yang mengampung -->
+    <!-- clear: left akan membuat paragraf ini ditempatkan setelah elemen yang mengampung -->
+    <p class="clear">
+      Ini adalah paragraf kedua. Ini akan ditempatkan setelah elemen yang
+      mengampung
+    </p>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+/* 
+    Pada selector .btn, kita mendefinisikan properti padding, 
+    background-color, color, border, cursor, dan transition. 
+    Properti transition digunakan untuk mengatur efek transisi 
+    saat kita menghover elemen. 
+*/
+.btn {
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+/* 
+    Pada selector .btn:hover, kita mendefinisikan properti 
+    background-color yang berbeda dari properti background-color 
+    pada selector .btn. 
+*/
+.btn:hover {
+    background-color: darkred;
+}
+
+/* 
+    Pada selector .box, kita mendefinisikan properti width, 
+    height, background-color, margin-top, dan animation. 
+    Properti animation digunakan untuk mengatur efek animasi 
+    yang akan dijalankan pada elemen. 
+*/
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 20px;
+    animation: slide 2s infinite;
+}
+
+/* 
+    Pada selector @keyframes slide, kita mendefinisikan 
+    properti transform yang akan dijalankan pada tiap-tiap 
+    frame animasi. 
+*/
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

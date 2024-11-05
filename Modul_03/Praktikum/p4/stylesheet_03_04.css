@@ -1,0 +1,80 @@
+/*
+    Code ini mendefinisikan style untuk empat buah div yang 
+    memiliki id box1, box2, box3, dan box4. Masing-masing div
+    memiliki properti position yang berbeda-beda, yaitu static,
+    relative, absolute, dan fixed. Properti top, left, right,
+    dan bottom juga didefinisikan untuk beberapa div. Dengan
+    demikian, kita dapat melihat bagaimana setiap properti
+    position mempengaruhi posisi elemen di dalam dokumen.
+*/
+
+.box1 {
+    position: static;
+    background-color: lightblue;
+    /*
+        Properti position static membuat elemen berada di
+        posisi defaultnya, yaitu berada di dalam normal
+        flow dokumen.
+    */
+}
+
+.box2 {
+    position: relative;
+    top: 20px;
+    background-color: lightblue;
+    /*
+        Properti position relative membuat elemen bergerak
+        relatif terhadap posisi aslinya. Dalam hal ini, elemen
+        akan bergerak 20px ke bawah dari posisi aslinya.
+    */
+}
+
+.box3 {
+    position:absolute;
+    top: 50px;
+    left: 50px;
+    background-color: lightcoral;
+    /*
+        Properti position absolute membuat elemen bergerak
+        relatif terhadap induknya. Dalam hal ini, elemen
+        akan bergerak 50px ke bawah dan 50px ke kanan dari
+        posisi aslinya.
+    */
+}
+
+.box4 {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: lightpink;
+    /*
+        Properti position fixed membuat elemen bergerak
+        relatif terhadap viewport. Dalam hal ini, elemen
+        akan bergerak 10px ke bawah dan 10px ke kanan dari
+        posisi aslinya.
+    */
+}
+
+p {
+    float: left;
+    width: 100px;
+    height: 50px;
+    background-color: yellow;
+    margin: 10px;
+    /*
+        Properti float left membuat paragraf berada di
+        sebelah kiri elemen lainnya. Properti width, height,
+        dan margin juga didefinisikan untuk menentukan
+        ukuran dan jarak antar paragraf.
+    */
+}
+
+.clear {
+    clear: left;
+    background-color: orange;
+    /*
+        Properti clear left membuat paragraf berada di
+        sebelah kiri elemen lainnya dan tidak berada di
+        sebelah kanan elemen lainnya.
+    */
+}

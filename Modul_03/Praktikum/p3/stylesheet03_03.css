@@ -1,0 +1,36 @@
+/*
+    Pada selector .kotak, kita mendefinisikan properti width dan 
+    height dengan nilai 100px, dan background-color dengan nilai 
+    lightblue. Ini berarti semua elemen .kotak akan memiliki lebar 
+    dan tinggi 100px, dan latar belakang berwarna lightblue.
+*/
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+/*
+    Pada selector .kotak:first-of-type, 
+    kita mendefinisikan properti padding
+    dengan nilai 20px dan border
+    dengan nilai 5px solid black. Ini berarti elemen .kotak
+    pertama akan memiliki padding 20px dan border 5px solid hitam.
+*/
+.kotak:first-of-type {
+    padding: 20px;
+    border: 5px solid black;
+}
+
+/*
+    Pada selector .kotak:last-of-type, kita mendefinisikan 
+    properti margin dengan nilai 20px dan border dengan nilai 5px 
+    solid black. Ini berarti elemen .kotak terakhir akan memiliki 
+    margin 20px dan border 5px solid hitam.
+*/
+.kotak:last-of-type {
+    margin: 20px;
+    border: 5px solid black;
+}
+
+

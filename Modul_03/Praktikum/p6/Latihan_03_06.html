@@ -1,0 +1,42 @@
+<!-- 
+    Pada tag <head>, kita mendefinisikan metadata dari dokumen 
+    seperti charset, viewport, dan title. Kita juga menghubungkan
+    file CSS dengan nama stylesheet_03_06.css menggunakan tag <link>.
+-->
+
+<!-- 
+    Pada tag <body>, kita mendefinisikan elemen <button> dengan
+    class btn dan elemen <div> dengan class box. Elemen-elemen
+    ini akan diatur menggunakan CSS.
+-->
+
+<!-- 
+    Pada selector .btn, kita mendefinisikan properti padding, 
+    background-color, color, border, cursor, dan transition.
+    Properti transition digunakan untuk mengatur efek transisi
+    saat kita menghover elemen. Pada selector .btn:hover, kita
+    mendefinisikan properti background-color yang berbeda dari
+    properti background-color pada selector .btn.
+-->
+
+<!-- 
+    Pada selector .box, kita mendefinisikan properti width, 
+    height, background-color, margin-top, dan animation.
+    Properti animation digunakan untuk mengatur efek animasi
+    yang akan dijalankan pada elemen. Pada selector @keyframes
+    slide, kita mendefinisikan properti transform yang akan
+    dijalankan pada tiap-tiap frame animasi.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Praktikum Animasi dan Transisi</title>
+    <link rel="stylesheet" href="stylesheet_03_06.css"/>
+  </head>
+  <body>
+    <button class="btn">Hover Me!</button>
+    <div class="box"></div>
+  </body>
+</html>

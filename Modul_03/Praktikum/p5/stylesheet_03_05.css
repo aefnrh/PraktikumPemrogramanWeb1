@@ -1,0 +1,37 @@
+/* 
+    Pada selector .container, kita mendefinisikan properti display: flex 
+    untuk membuat elemen menjadi flex container. Properti justify-content: 
+    space-around digunakan untuk menyebar elemen-elemen di dalam flex
+    container secara merata. Properti align-items: center digunakan untuk
+    mengatur elemen-elemen di dalam flex container agar berada di tengah-tengah
+    secara vertikal. Properti height: 200px digunakan untuk mengatur tinggi
+    dari flex container. Properti background-color: lightgray digunakan untuk
+    mengatur warna latar belakang dari flex container.
+*/
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    background-color: lightgray;
+}
+
+/* 
+    Pada selector .item, kita mendefinisikan properti width dan height
+    dengan nilai 50px untuk membuat elemen-elemen di dalam flex container
+    memiliki lebar dan tinggi yang sama. Properti background-color: coral
+    digunakan untuk mengatur warna latar belakang dari elemen-elemen di
+    dalam flex container. Properti display: flex digunakan untuk membuat
+    elemen-elemen di dalam flex container menjadi flex item. Properti
+    justify-content: center dan align-items: center digunakan untuk
+    mengatur elemen-elemen di dalam flex container agar berada di tengah-tengah
+    secara horisontal dan vertikal.
+*/
+.item {
+    width: 50px;
+    height: 50px;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

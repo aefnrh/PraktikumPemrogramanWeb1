@@ -1,0 +1,54 @@
+body { 
+    display: flex; 
+    flex-direction: column; 
+    height: 100vh; margin: 0;
+}
+/*
+    - Pada bagian pertama, kode CSS mengatur body untuk menjadi flex container
+      dengan arah vertikal (column). Body juga diatur untuk memiliki tinggi
+      100vh dan margin 0. Hal ini membuat elemen-elemen di dalam body menjadi
+      flex item yang bergerak secara vertikal.
+      */
+header, footer { 
+    background-color: lightcoral; 
+    padding: 10px; 
+    text-align: center; 
+}
+/*
+    - Pada bagian kedua, kode CSS mengatur header dan footer untuk memiliki
+      background color lightcoral, padding 10px, dan text-align center. Hal
+      ini membuat header dan footer menjadi lebih menarik dan mudah dibaca.
+      */
+main {
+    flex: 1;
+    background-color: lightblue;
+    padding: 20px;
+}
+/*
+    - Pada bagian ketiga, kode CSS mengatur main untuk memiliki flex 1, yang
+      berarti main akan bergerak secara relatif terhadap induknya. Main juga
+      diatur untuk memiliki background color lightblue dan padding 20px. Hal
+      ini membuat main menjadi lebih menarik dan mudah dibaca.
+
+    - Pada bagian keempat, kode CSS mengatur media query untuk menangani
+      perubahan layout ketika ukuran layar kurang dari 600px. Pada kondisi
+      ini, body diatur untuk memiliki flex-direction row, yang berarti
+      elemen-elemen di dalam body akan bergerak secara horizontal. Header
+      dan footer diatur untuk memiliki flex 1, yang berarti mereka akan
+      bergerak secara relatif terhadap induknya. Main diatur untuk memiliki
+      flex 2, yang berarti main akan bergerak dua kali lebih cepat daripada
+      header dan footer. Hal ini membuat layout menjadi lebih responsif
+      terhadap perubahan ukuran layar.
+*/
+@media(max-width: 600px) {
+    body {
+        flex-direction: row;
+    }
+    header, footer {
+        flex: 1;
+        padding: 5px;
+    }
+    main {
+        flex: 2;
+    }
+}
