@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Alumni</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Alumni</h1>
+        <input type="text" id="searchInput" placeholder="Cari alumni berdasarkan nama atau jurusan..." onkeyup="filterAlumni()">
+        
+        <div id="alumniList" class="alumni-list">
+            <!-- Daftar alumni -->
+            <div class="alumni-profile" data-nama="John Doe" data-jurusan="Teknik Informatika">
+                <i class="fas fa-user-graduate"></i>
+                <h2>Ahmad Malik</h2>
+                <p>Jurusan: Teknik Informatika</p>
+            </div>
+            <div class="alumni-profile" data-nama="Jane Smith" data-jurusan="Sistem Informasi">
+                <i class="fas fa-user-graduate"></i>
+                <h2>Aef Nur Hidayah</h2>
+                <p>Jurusan: Sistem Informasi</p>
+            </div>
+            <div class="alumni-profile" data-nama="Alice Johnson" data-jurusan="Design Komunikasi Visual">
+                <i class="fas fa-user-graduate"></i>
+                <h2>Yusuf Fauzin</h2>
+                <p>Jurusan: Design Komunikasi Visual</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
