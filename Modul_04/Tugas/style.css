@@ -1,60 +1,60 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
-    margin: 0;
-    padding: 20px;
-}
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 20px;
+    }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
+    .container {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
 
-h1 {
-    text-align: center;
-    color: #333;
-}
+    h1 {
+        text-align: center;
+        color: #333;
+    }
 
-input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-}
+    input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
 
-.alumni-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
+    .alumni-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
 
-.alumni-profile {
-    background-color: #e9ecef;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s; /* Transisi untuk efek hover */
-}
+    .alumni-profile {
+        background-color: #e9ecef;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s; /* Transisi untuk efek hover */
+    }
 
-.alumni-profile:hover {
-    transform: translateY(-5px); /* Efek mengangkat */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
-}
+    .alumni-profile:hover {
+        transform: translateY(-5px); /* Efek mengangkat */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+    }
 
-.alumni-profile i {
-    font-size: 40px; /* Ukuran ikon */
-    color: #007bff; /* Warna ikon */
-}
+    .alumni-profile i {
+        font-size: 40px; /* Ukuran ikon */
+        color: #007bff; /* Warna ikon */
+    }
 
-.alumni-profile h2 {
-    margin-top: 10px;
-}
+    .alumni-profile h2 {
+        margin-top: 10px;
+    }
 
-.alumni-profile p {
-    color: #666; /* Warna teks jurusan */
-}
+    .alumni-profile p {
+        color: #666; /* Warna teks jurusan */
+    }
