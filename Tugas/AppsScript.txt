@@ -1,0 +1,54 @@
+function doGet(e) {
+  const action = e.parameter.action;
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  
+  switch (action) {
+    case 'add':
+      return addJob(e, sheet);
+    case 'update':
+      return updateJob(e, sheet);
+    case 'delete':
+      return deleteJob(e, sheet);
+    case 'search':
+      return searchJobs(e, sheet);
+    default:
+      return ContentService.createTextOutput(JSON.stringify({ error: 'Invalid action' })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function addJob(e, sheet) {
+  const { title, description, location, salary } = e.parameter;
+  if (!title || !description || !location || !salary) {
+    return ContentService.createTextOutput(JSON.stringify({ error: 'Missing required fields' })).setMimeType(ContentService.MimeType.JSON);
+  }
+  sheet.appendRow([title, description, location, salary]);
+  return ContentService.createTextOutput(JSON.stringify({ message: 'Job added successfully' })).setMimeType(ContentService.MimeType.JSON);
+}
+
+function updateJob(e, sheet) {
+  const { id, title, description, location, salary } = e.parameter;
+  const row = parseInt(id) + 2; // Adjusting for 1-based index in Sheets, and skipping the header row
+  if (!title || !description || !location || !salary) {
+    return ContentService.createTextOutput(JSON.stringify({ error: 'Missing required fields' })).setMimeType(ContentService.MimeType.JSON);
+  }
+  sheet.getRange(row, 1).setValue(title);
+  sheet.getRange(row, 2).setValue(description);
+  sheet.getRange(row, 3).setValue(location);
+  sheet.getRange(row, 4).setValue(salary);
+  return ContentService.createTextOutput(JSON.stringify({ message: 'Job updated successfully' })).setMimeType(ContentService.MimeType.JSON);
+}
+
+function deleteJob(e, sheet) {
+  const { id } = e.parameter;
+  const row = parseInt(id) + 2; // Adjusting for 1-based index in Sheets, and skipping the header row
+  sheet.deleteRow(row);
+  return ContentService.createTextOutput(JSON.stringify({ message: 'Job deleted successfully' })).setMimeType(ContentService.MimeType.JSON);
+}
+
+function searchJobs(e, sheet) {
+  const { query } = e.parameter;
+  const data = sheet.getDataRange().getValues();
+  const headers = data.shift(); // Remove the headers
+  const results = data.filter(row => row.some(cell => cell.toString().toLowerCase().includes(query.toLowerCase())));
+  return ContentService.createTextOutput(JSON.stringify({ results })).setMimeType(ContentService.MimeType.JSON);
+}
