@@ -12,7 +12,7 @@
         body {
             margin: 0; /*Menghilangkan margin default dari body*/
         }
-        .jumbotron-bg {backgorund-image: url('https://fkom.uniku.ac.id/wp-content/uploads/2023/01/Header-Home.jpg'); /* URL gambar latar belakang */
+        .jumbotron-bg {background-image: url('https://fkom.uniku.ac.id/wp-content/uploads/2023/01/Header-Home.jpg'); /* URL gambar latar belakang */
         background-size: cover;
         background-position: center;
         color: white; /* Warna teks dijumbotron*/
@@ -22,15 +22,17 @@
 <body>
     <!-- Bagian atas : Jumbotron dengan latar belakang gambar -->
      <header class="jumbotron-bg text-white text-center py-5">
-        <div class="display-4">Selamat Datang di Website Kami</div>
-        <p class="lead">Ini adalah contoh jumbotron dengan latar belakang gambar di bagian atas.</p>
+        <div class="container">
+            <h1 class="display-4">Selamat Datang di Website Alumni</h1>
+            <p class="lead">Website ini menyediakan informasi tentang alumni Fakultas Komputer</p>
+        </div>
      </header>
 
      <div class="container-fluid my-4">
         <div class="row">
         <!-- Bagian Kiri : Menu -->
          <?php
-            include 'Latihan_08_menu.php';
+            include 'Latihan_09_menu.php';
             ?>
 
             <!-- Bagian Tengah : Artikel -->
@@ -39,12 +41,15 @@
                     <?php
                     extract($_GET);
                     if(isset($menu)){
-                        if($menu == "a"){
-                            include 'Latihan_08_artikel_a.php';
+                        if($menu == "home"){@include "Latihan_09_home.php";}    
+                        else if($menu == "about"){@include "Latihan_09_about.php";}
+                        else if($menu == "alumni"){@include "Latihan_09_ralumni.php";}
+                        else if($menu == "calumni"){@include "Latihan_09_calumni.php";}
+                        else if($menu == "ualumni"){@include "Latihan_09_ualumni.php";}
+                        else if($menu == "bukutamu"){@include "Latihan_09_bukutamu.php";}
+                    } else {
+                        @include "Latihan_09_home.php";
                     }
-                }else{
-                    // include "Latihan_08_home.php";
-                }
                 ?>
                 </article>
              </main>
@@ -53,7 +58,7 @@
 
      <!-- Bagian Bawah : Footer -->
      <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2024 Website Kami. ALl right reserved.</p>
+        <p>&copy; 2024 Website Kami. All right reserved.</p>
     </footer>
             <!-- Bootsrap 5 JS-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
